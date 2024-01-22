@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Easily discover GitHub profiles. Search, find and explore user details, profile pictures and repository statistics. Get quick insights into contributors and projects. Simplify your GitHub exploration experience.">
+    <meta name="keywords" content="Mehrabios, Mehrab Anbarlou, Mohammad Hossein Anbarlou, Mehrab, Projects, GitHub, Portfolio, Coding, Programming, Web Development, Open Source, HTML, CSS, JavaScript, Responsive Design, Web Game Development, Interactive Web Game, JavaScript Game, HTML Game, CSS Game, Mini Project, GitHub Users, GitHub User Profile, GitHub User Explorer, GitHub Profile Explorer, GitHub Explorer, GitHub Repositories, GitHub Repositories Explorer">
+    <meta name="author" content="Mehrab Anbarlou">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Explorer | Easily View Details Of GitHub Profiles</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Easily View Details Of GitHub Profiles</h1>
+        </div>
+        <div class="paragraph">
+            <p>Discover GitHub profiles easily. By just searching for the username, you can see the available information including username and user avatar, descriptions and information about the repositories. Simplify your GitHub exploration experience.</p>
+        </div>
+        <form class="username-form" onsubmit="usernameFounder(event)">
+            <input type="text" placeholder="Enter Username" class="username-input">
+            <button type="submit" class="username-input-submit">Search</button>
+        </form>
+        <div class="error-message">
+            <p class="error-message-text"></p>
+        </div>
+    </header>
+    <main class="d-none">
+        <div class="user-details">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <a href="#" target="_blank" class="user-link">
+                        <img src="#" alt="#" title="#" class="user-img">
+                    </a>
+                </div>
+                <div class="name">
+                    <h2 class="name-text"></h2>
+                </div>
+                <div class="username">
+                    <h3 class="username-text"></h3>
+                </div>
+                <div class="bio">
+                    <p class="bio-text"></p>
+                </div>
+                <div class="blog-detail">
+                    <a class="detail-text blog-link" href="#" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-link-45deg blog-svg d-none" viewBox="0 0 16 16">
+                            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                        </svg>
+                        <span class="blog-text"></span>
+                    </a>
+                </div>
+                <div class="twitter-detail">
+                    <a class="detail-text twitter-link" href="#" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-twitter twitter-svg d-none" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                        </svg>
+                        <span class="twitter-text"></span>
+                    </a>
+                </div>
+                <div class="location-detail">
+                    <p class="detail-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-geo-alt-fill loc-svg d-none" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                        </svg>
+                        <span class="loc-text"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="details">
+                <div class="title">
+                    <h2>User Status:</h2>
+                </div>
+                <div class="total-stars total-details">
+                    <p>Total Stars:</p>
+                    <span class="total-stars-text"></span>
+                </div>
+                <div class="total-forks total-details">
+                    <p>Total Forks:</p>
+                    <span class="total-forks-text"></span>
+                </div>
+                <div class="total-watchers total-details">
+                    <p>Total Watchers:</p>
+                    <span class="total-watchers-text"></span>
+                </div>
+            </div>
+        </div>
+        <div class="repository-details"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./JS/app.js"></script>
+</body>
+</html>

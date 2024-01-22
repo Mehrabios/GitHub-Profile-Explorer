@@ -1,5 +1,5 @@
 # GitHub-Profile-Explorer
-Easily discover GitHub profiles. Search, find and explore user details, profile pictures and repository statistics. Get quick insights into contributors and projects. Simplify your GitHub exploration experience.
+Discover GitHub profiles easily. By just searching for the username, you can see the available information including username and user avatar, descriptions and information about the repositories. Simplify your GitHub exploration experience.
 
 ## Description
 Search for a person's username and view information including the user's avatar, username, total repositories, forks, and stars, as well as the person's repository information.

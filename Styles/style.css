@@ -1,0 +1,286 @@
+@font-face {
+    font-family: DMSans;
+    src: url(../Fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+* {
+    font-family: DMSans;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+*::selection {
+    background-color: #1b8dff;
+}
+body {
+    margin: 0px;
+    background-color: #24292e;
+    color: #ffffff;
+}
+header {
+    width: 75%;
+    margin: 35px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+header .title h1 {
+    font-size: 4.75rem;
+    margin: 25px auto 15px;
+}
+header .paragraph {
+    width: 65%;
+}
+header .paragraph p {
+    font-size: 1.5rem;
+}
+header .username-form {
+   width: 100%; 
+   display: flex;
+   flex-direction: row;
+   margin: 100px auto 35px;
+}
+header .username-form .username-input {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    padding: 14px 10px;
+    outline: none;
+    border-radius: 8px 0px 0px 8px;
+    background-color: #24292e;
+    border: 0.5px solid #666666;
+    border-right: none;
+    color: #ffffff;
+    transition: 0.5s;
+}
+header .username-form .username-input::placeholder {
+    color: #666666;
+    transition: 0.3s;
+}
+header .username-form .username-input:focus {
+    background-color: #2b3137;
+    border-color: #9b9b9b;
+}
+header .username-form .username-input:focus::placeholder {
+    color: #9b9b9b;
+}
+header .username-form .username-input-submit {
+    padding: 14px 10px;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
+    background-color: #2dba4e;
+    color: #ffffff;
+    border: 0.5px solid #2dba4e;
+    transition: 0.5s;
+}
+header .username-form .username-input-submit:active {
+    background-color: #2b833f;
+    border-color: #2b833f;
+}
+header .error-message .error-message-text {
+    color: #fc3e3b;
+    font-size: 3rem;
+}
+main {
+    width: 85%;
+    margin: 0px auto 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 35px;
+}
+main .user-details {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto 0px;
+}
+main .user-details .user-info {
+    width: 100%;
+    background-color: #2b3137;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+}
+main .user-details .user-info .detail-text {
+    margin: 4px 0px 0px;
+}
+main .user-details .user-info .user-avatar {
+    width: 100%;
+}
+main .user-details .user-info .user-avatar img {
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+main .user-details .user-info .name h2 {
+    font-size: 3rem;
+    margin: 10px 0px 5px;
+}
+main .user-details .user-info .username h3 {
+    font-size: 2.3rem;
+    margin: 0px 0px 8px;
+    color: #cfcfcf;
+    font-weight: 600;
+}
+main .user-details .user-info .bio p {
+    font-size: 1.2rem;
+}
+main .user-details .user-info a , main .user-details .user-info p {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    cursor: default;
+    margin-top: 8px;
+}
+main .user-details .user-info a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+main .user-details .user-info a:hover {
+    text-decoration: underline;
+}
+main .user-details .user-info span {
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+main .user-details .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b3137;
+    padding: 30px;
+    border-radius: 18px;
+}
+main .user-details .details .title h2 {
+    font-size: 2.7rem;
+    margin: 0px auto 10px;
+    color: #2dba4e;
+}
+main .user-details .details .total-details {
+    text-align: center;
+}
+main .user-details .details .total-details p {
+    font-size: 1.4rem;
+    margin: 6px auto;
+}
+main .user-details .details .total-details span {
+    font-size: 1.4rem;
+}
+main .repository-details {
+    width: 66%;
+}
+main .repository-details .repos {
+    background-color: #2b3137;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+}
+main .repository-details .repos .title h3 {
+    font-size: 2.5rem;
+    margin: 0px 0px 8px;
+}
+main .repository-details .repos .description p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 0px;
+}
+main .repository-details .repos .topics {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+main .repository-details .repos .topics .topic {
+    color: #84ffa1;
+    background-color: #1a6a2d;
+    margin: 16px 8px 0px 0px;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.d-none {
+    display: none;
+}
+.d-block {
+    display: block;
+}
+.d-flex {
+    display: flex;
+}
+@media only screen and (max-width: 768px) {
+    header {
+        width: 90%;
+        margin-top: 0px;
+    }
+    header .title h1 {
+        font-size: 2.5rem;
+    }
+    header .paragraph {
+        width: 100%;
+    }
+    header .paragraph p {
+        font-size: 1.2rem;
+        margin: 0px;
+    }
+    header .username-form {
+        margin: 25px auto 0px;
+    }
+    header .username-form .username-input {
+        font-size: 1rem;
+        padding: 0px 8px 0px 8px;
+        border-radius: 5px 0px 0px 5px;
+    }
+    header .username-form .username-input-submit {
+        font-size: 1rem;
+        padding: 7px 7px 7px 7px;
+        border-radius:  0px 5px 5px 0px;
+    }
+    main {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+    main .user-details, main .repository-details {
+        width: 100%;
+    }
+    main .user-details .user-info , main .user-details .details {
+        padding: 15px;
+    }
+    main .user-details .user-info .name .name-text {
+        font-size: 2.8rem;
+    }
+    main .user-details .user-info .username .username-text {
+        font-size: 2rem;
+    }
+    main .user-details .user-info .bio p {
+        font-size: 1.1rem;
+    }
+    main .user-details .details .total-details p , main .user-details .details .total-details span {
+        font-size: 1.2rem;
+    }
+    main .repository-details .repos {
+        padding: 15px;
+    }
+    main .repository-details .repos .title h3 {
+        font-size: 2rem;
+    }
+    main .repository-details .repos .description p {
+        font-size: 1.1rem;
+        margin-top: 0px;
+    }
+    main .repository-details .repos .topics .topic {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    main , header {
+        width: 95%;
+    }
+}
